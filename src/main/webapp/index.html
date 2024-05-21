@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightblue; /* Cambia el color de fondo a azul claro */
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        function limpiarFormulario() {
+            // Obtener referencia a los campos del formulario
+            var nombreInput = document.getElementById('nombre');
+            var apellidoInput = document.getElementById('apellido')
+            var emailInput = document.getElementById('email');
+            var mensajeTextarea = document.getElementById('mensaje')
+            var edadInput = document.getElementById('edad');
+            var cursolInput = document.getElementById('curso');
+            var lenguajelInput = document.getElementById('lenguaje');
+            var generolInput = document.getElementById('genero');
+
+            // var mensajeTextarea = document.getElementById('mensaje');
+
+            // Limpiar los valores de los campos
+            nombreInput.value = '';
+            apellidoInput.value = '';
+            emailInput.value = '';
+            mensajeTextarea.value = '';
+            cursolInput.value = '';
+            edadInput.value = '';
+            lenguajelInput.value = '';
+            generolInput.value = '';
+        }
+
+
+    </script>
+</head>
+<body>
+<center><h1 style="color: Blue;font-size: xx-large">AVANCE</h1></center>
+
+<hr>
+
+
+<center>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-container">
+                    <h2>Formulario de Contacto</h2>
+
+                    <form action="formulario" method="post">
+
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" class="form-control" id="apellido" placeholder="Introduce tu apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="edad">Edad:</label>
+                            <input type="text" class="form-control" id="edad" placeholder="Introduce tu edad">
+                        </div>
+                        <div class="form-group">
+                            <label for="curso">Curso:</label>
+                            <input type="text" class="form-control" id="curso" placeholder="Introduce tu curso">
+                        </div>
+                        <div class="form-group">
+                        <label>GENERO:</label><br><br>
+                        <input type="radio" id="femenino" name="genero" value="femenino">
+                        <label for="femenino">FEMENINO</label><br>
+                        <input type="radio" id="masculino" name="genero" value="masculino">
+                        <label for="masculino">MASCULINO</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Introduce tu correo electrónico">
+                        </div>
+
+                        <label>Lenguaje de programación favorito:</label><br>
+                        <input type="radio" id="java" name="lenguaje" value="Java">
+                        <label for="java">Java</label><br>
+                        <input type="radio" id="python" name="lenguaje" value="Python">
+                        <label for="python">Python</label><br>
+                        <input type="radio" id="javascript" name="lenguaje" value="JavaScript">
+                        <label for="javascript">JavaScript</label><br>
+                        <input type="radio" id="csharp" name="lenguaje" value="C#">
+                        <label for="csharp">C#</label><br><br>
+
+
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+
+                        <input type="button" value="Limpiar" onclick="limpiarFormulario()">
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
